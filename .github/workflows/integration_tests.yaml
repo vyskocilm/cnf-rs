@@ -16,7 +16,7 @@ jobs:
       # cache pulled docker images
       - uses: ScribeMD/docker-cache@0.3.3
         with:
-          key: docker-${{ runner.os }}-${{ hashFiles(paths) }}
+          key: docker-${{ runner.os }}-${{ hashFiles('integration_tests/test_cnf_binary.py') }}
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
