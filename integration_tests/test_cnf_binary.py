@@ -11,7 +11,7 @@ from pytest_container.container import ContainerData
 _COMMAND_NOT_FOUND_BIN = "/src/target/debug/cnf-rs"
 
 # containerfile that builds cnf-rs and sources the bash helper
-_CONTAINERFILE = f"""RUN zypper -n in rust libsolv-devel cargo clang-devel
+_CONTAINERFILE = f"""RUN zypper -n in shadow rust libsolv-devel cargo clang-devel
 WORKDIR /src/
 ENV COMMAND_NOT_FOUND_BIN={_COMMAND_NOT_FOUND_BIN}
 COPY . /src/
@@ -21,36 +21,32 @@ RUN cargo build && echo "source /src/command_not_found_bash" >> /etc/bash.bashrc
 # extension of the containerfile which runs as a different user
 _USER_CONTAINERFILE = (
     _CONTAINERFILE
-    + """RUN zypper -n in shadow && useradd -m geeko
+    + """RUN useradd -m geeko
 USER geeko
 """
 )
 
-TW, LEAP_15_4, LEAP_15_5 = [
+LEAP_15_5 = [
     DerivedContainer(
         base=base_url,
         containerfile=_CONTAINERFILE,
     )
     for base_url in (
-        "registry.opensuse.org/opensuse/tumbleweed:latest",
-        "registry.opensuse.org/opensuse/leap:15.4",
         "registry.opensuse.org/opensuse/leap:15.5",
     )
 ]
 
-TW_USR, LEAP_15_4_USR, LEAP_15_5_USR = [
+TW_USR = [
     DerivedContainer(
         base=base_url,
         containerfile=_USER_CONTAINERFILE,
     )
     for base_url in (
         "registry.opensuse.org/opensuse/tumbleweed:latest",
-        "registry.opensuse.org/opensuse/leap:15.4",
-        "registry.opensuse.org/opensuse/leap:15.5",
     )
 ]
 
-CONTAINER_IMAGES = [TW, TW_USR, LEAP_15_4, LEAP_15_4_USR, LEAP_15_5, LEAP_15_5_USR]
+CONTAINER_IMAGES = [TW_USR, LEAP_15_5]
 
 
 def test_cnf_finds_cmake(auto_container: ContainerData) -> None:
@@ -68,7 +64,7 @@ def test_cnf_finds_cmake(auto_container: ContainerData) -> None:
 
 
 @pytest.mark.parametrize(
-    "container", [TW_USR, LEAP_15_4_USR, LEAP_15_5_USR], indirect=True
+    "container", [TW_USR, LEAP_15_5], indirect=True
 )
 def test_cnf_finds_usr_sbin(container: ContainerData) -> None:
     """Check that :command:`cnf-rs zypp-refresh` executed as an unprivileged

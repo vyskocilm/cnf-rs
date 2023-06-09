@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # cache pulled docker images
+      - uses: ScribeMD/docker-cache@0.3.3
+        with:
+          key: docker-${{ runner.os }}-${{ hashFiles(paths) }}
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
