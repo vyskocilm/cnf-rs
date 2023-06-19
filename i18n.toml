@@ -6,7 +6,11 @@ fallback_language = "en"
 
 [gettext]
 # (Required) The languages that the software will be translated into.
-target_languages = ["cs"]
+target_languages = [
+    "af",
+    "ar",
+    "cs"
+]
 
 # (Required) Path to the output directory, relative to `i18n.toml` of the crate
 # being localized.
