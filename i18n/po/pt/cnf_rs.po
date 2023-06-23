@@ -1,0 +1,62 @@
+# Portuguese translations for cnf-rs package.
+# Copyright (C) 2023 openSUSE project
+# This file is distributed under the same license as the cnf-rs package.
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cnf-rs 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-05 12:05+0200\n"
+"PO-Revision-Date: 2011-11-07 22:05+0100\n"
+"Last-Translator: Elisio Catana <ecatana@gmail.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/main.rs:37
+msgid ""
+"Absolute path to '{}' is '{}'. Please check your $PATH variable to see "
+"whether it contains the mentioned path."
+msgstr ""
+"Caminho completo para '{}' é '{}'. Por favor verifique "
+"a variavel $PATH para confirmar se contem o caminho mencionado."
+
+#: src/main.rs:43
+msgid ""
+"Absolute path to '{}' is '{}', so running it may require superuser "
+"privileges (eg. root)."
+msgstr ""
+"Caminho completo para o '{}' é  '{}', por essa razão, "
+"deverá ser necessário permissões de administração (ex. root)."
+
+#: src/main.rs:63
+msgid "command not found"
+msgstr "comando não encontrado"
+
+#: src/main.rs:69
+msgid "<selected_package>"
+msgstr ""
+
+#: src/main.rs:76
+msgid "The program '{}' can be found in the following package:"
+msgid_plural "The program '{}' can be found in following packages:"
+msgstr[0] "O programa '{}' pode ser encontrado no seguinte pacote:"
+msgstr[1] ""
+"Os programas '{}' podem ser encontrados nos seguintes pacotes:"
+
+#: src/main.rs:86
+msgid "  * {} [ path: {}/{}, repository: {} ]"
+msgstr "  * {} [ path: {}/{}, repositorio: {} ]"
+
+#: src/main.rs:98
+msgid ""
+"Try installing with:\n"
+"   "
+msgstr ""
+"A tentar instalar com:\n"
+"   "

@@ -1,0 +1,64 @@
+# Lithuanian translations for cnf-rs package.
+# Copyright (C) 2023 openSUSE project
+# This file is distributed under the same license as the cnf-rs package.
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cnf-rs 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-19 19:32+0000\n"
+"PO-Revision-Date: 2023-06-19 21:33+0200\n"
+"Last-Translator: michal <michal@cnf-rs.localhost.localdomain>\n"
+"Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/main.rs:37
+msgid ""
+"Absolute path to '{}' is '{}'. Please check your $PATH variable to see "
+"whether it contains the mentioned path."
+msgstr ""
+"Pilnas kelias iki „{}“ yra „{}“. Patikrinkite $PATH "
+"kintamąjį, norėdami pamatyti, ar jis turi turi minimą kelią."
+
+#: src/main.rs:43
+msgid ""
+"Absolute path to '{}' is '{}', so running it may require superuser "
+"privileges (eg. root)."
+msgstr ""
+"Pilnas kelias iki „{}“ yra „{}“, taigi paleidimui gali "
+"reikėti super naudotojo teisių (pvz., root)."
+
+#: src/main.rs:63
+msgid "command not found"
+msgstr "komanda nerasta"
+
+#: src/main.rs:69
+msgid "<selected_package>"
+msgstr "<pasirinktas_paketas>"
+
+#: src/main.rs:76
+msgid "The program '{}' can be found in the following package:"
+msgid_plural "The program '{}' can be found in following packages:"
+msgstr[0] "Programa „{}“ gali būti šiame pakete:"
+msgstr[1] "Programa „{}“ gali būti šiuose paketuose:"
+msgstr[2] "Programa „{}“ gali būti šiuose paketuose:"
+msgstr[3] "Programa „{}“ gali būti šiuose paketuose:"
+
+#: src/main.rs:86
+msgid "  * {} [ path: {}/{}, repository: {} ]"
+msgstr "  * {} [ kelias: {}/{}, saugykla: {} ]"
+
+#: src/main.rs:98
+msgid ""
+"Try installing with:\n"
+"   "
+msgstr ""
+"Mėginkite įdiegti su:\n"
+"   "

@@ -1,0 +1,65 @@
+# Polish translations for cnf-rs package.
+# Copyright (C) 2023 openSUSE project
+# This file is distributed under the same license as the cnf-rs package.
+# Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
+# Mariusz Fik <fisiu@opensuse.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cnf-rs 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-05 12:05+0200\n"
+"PO-Revision-Date: 2019-02-07 12:02+0000\n"
+"Last-Translator: Ewelina Michalowska <ewelina.michalowska@stgambit.com>\n"
+"Language-Team: Polish <https://l10n.opensuse.org/projects/scout/"
+"command-not-found-master/pl/>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.3\n"
+
+#: src/main.rs:37
+msgid ""
+"Absolute path to '{}' is '{}'. Please check your $PATH variable to see "
+"whether it contains the mentioned path."
+msgstr ""
+"Ścieżką bezwzględną programu {} jest {}. Sprawdź czy "
+"zmienna $PATH zawiera podaną ścieżkę."
+
+#: src/main.rs:43
+msgid ""
+"Absolute path to '{}' is '{}', so running it may require superuser "
+"privileges (eg. root)."
+msgstr ""
+"Ścieżką bezwzględną programu {} jest {}, więc "
+"uruchomienie może wymagać uprawień super użytkownika (np. root)."
+
+#: src/main.rs:63
+msgid "command not found"
+msgstr "polecenie nieznalezione"
+
+#: src/main.rs:69
+msgid "<selected_package>"
+msgstr "<wybrany_pakiet>"
+
+#: src/main.rs:76
+msgid "The program '{}' can be found in the following package:"
+msgid_plural "The program '{}' can be found in following packages:"
+msgstr[0] "Program {} znaleziono w następującym pakiecie:"
+msgstr[1] "Program '{}' znaleziono w następujących pakietach:"
+msgstr[2] "Program '{}' znaleziono w następujących pakietach:"
+
+#: src/main.rs:86
+msgid "  * {} [ path: {}/{}, repository: {} ]"
+msgstr "  * {} [ ścieżka: {}/{}, repozytorium: {} ]"
+
+#: src/main.rs:98
+msgid ""
+"Try installing with:\n"
+"   "
+msgstr ""
+"Zainstaluj razem z:\n"
+"   "
